@@ -2,6 +2,21 @@
 ## Introduction
 
 This data pipeline aims to extract the top 100 songs from the Spotify API every hour and subsequently process and load the data into a database for querying and analysis.
+## Prerequisites
++ Spotify API credentials (client ID and client secret).
++ An AWS account with appropriate permissions to create and manage Lambda functions, S3 buckets, AWS Glue, and Amazon Athena.
++ Basic familiarity with Python, AWS Lambda, AWS Glue, and Amazon Athena.
+## Pipeline Overview
+**Spotify API Data Extraction:** Python script retrieves the top 100 songs from the Spotify API.
+
+**AWS Lambda for Data Loading (Raw Data):** AWS Lambda triggered by CloudWatch every hour to load raw data into an S3 bucket.
+
+**AWS Lambda for Data Transformation:** Another Lambda triggered by CloudWatch to process raw data and organize it into subfolders.
+
+**AWS Glue Data Catalog and ETL:** AWS Glue crawls the transformed data and loads it into a database table.
+
+**Querying Data with Amazon Athena:** Query the data using SQL-like queries through Amazon Athena.
+
 ## Architecture
 ![Architecture Diagram](https://github.com/Adedamola29/Data-Engineering-End-to-End-Project/blob/main/Architecture.png)
 
