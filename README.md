@@ -1,4 +1,4 @@
-# Spotify-ETL-End-to-End-Project
+# Spotify ETL Data Pipeline
 ## Introduction
 
 This data pipeline aims to extract the top 100 songs from the Spotify API every hour and subsequently process and load the data into a database for querying and analysis.
